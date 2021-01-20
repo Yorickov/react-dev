@@ -30,6 +30,7 @@ module.exports = merge(Common, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
+      chunkFilename: '[id].css'
     }),
   ],
   optimization: {
@@ -38,5 +39,7 @@ module.exports = merge(Common, {
   },
   performance: {
     hints: 'error',
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 });

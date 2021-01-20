@@ -14,7 +14,7 @@ frontent-build:
 	npm run build
 
 server-build:
-	docker build --file=docker/nginx/Dockerfile --tag=react-dev .
+	docker build -f docker/nginx/Dockerfile -t react-dev .
 
 docker-up:
 	docker-compose up --remove-orphans -d
@@ -30,5 +30,8 @@ push:
 
 clean:
 	rm -rf public
+
+test:
+	npm test
 
 .PHONY: test
