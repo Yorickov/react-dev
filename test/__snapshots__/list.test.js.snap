@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListGroup 1`] = `
+<ul
+  class="list-group"
+>
+  <li
+    class="list-group-item"
+  >
+    <p>
+      one
+    </p>
+  </li>
+  <li
+    class="list-group-item"
+  >
+    <p>
+      two
+    </p>
+  </li>
+</ul>
+`;

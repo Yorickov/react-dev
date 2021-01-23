@@ -13,6 +13,7 @@
     "@popperjs/core": "^2.6.0",
     "bootstrap": "^5.0.0-beta1",
     "classnames": "*",
+    "cn": "^0.1.1",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
     "react": "*",

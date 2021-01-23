@@ -1,5 +1,6 @@
 import React from 'react';
 import { uniqueId } from 'lodash';
+import PropTypes from 'prop-types';
 
 const Definitions = ({ data }) => {
   const renderDef = (array) => (
@@ -14,6 +15,10 @@ const Definitions = ({ data }) => {
   );
 
   return data.length > 0 && renderDef(data);
+};
+
+Definitions.propTypes = {
+  data: PropTypes.array,
 };
 
 export default Definitions;
