@@ -1,5 +1,5 @@
 import 'bootstrap/dist/js/bootstrap';
 import './common.scss';
-import application from './application.jsx';
+import reactApplication from './react_application.jsx';
 
-application();
+reactApplication();

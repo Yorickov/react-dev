@@ -30,6 +30,7 @@ module.exports = {
       template: `${paths.src}/template.html`,
       filename: 'index.html',
       title: 'React dev',
+      favicon: `${paths.src}/images/favicon.ico`,
     }),
   ],
 };
