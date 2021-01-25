@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpDialog 1`] = `
+<div
+  class="card text-primary"
+>
+  <div
+    class="card-body"
+  >
+    <h2
+      class="card-title"
+    >
+      Marse research program
+    </h2>
+    <p
+      class="card-text"
+    >
+      What is your name?
+    </p>
+    <form>
+      <input
+        class="from-control"
+        value=""
+      />
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Take me!
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`SignUpDialog 2`] = `
+<div
+  class="card text-primary"
+>
+  <div
+    class="card-body"
+  >
+    <h2
+      class="card-title"
+    >
+      Marse research program
+    </h2>
+    <p
+      class="card-text"
+    >
+      What is your name?
+    </p>
+    <form>
+      <input
+        class="from-control"
+        value="Pete"
+      />
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Take me!
+      </button>
+    </form>
+  </div>
+</div>
+`;
