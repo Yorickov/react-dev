@@ -1,0 +1,66 @@
+import React, { Component } from 'react';
+import cn from 'classnames';
+import PropTypes from 'prop-types';
+
+class Carousel extends Component {
+  state = { currentIdx: 0 };
+
+  setNext = (e) => {
+    e.preventDefault();
+    const { images } = this.props;
+    const { currentIdx } = this.state;
+    const nextIdx = ((currentIdx + 1) % images.length);
+    this.setState({ currentIdx: nextIdx });
+  };
+
+  setPrev = (e) => {
+    e.preventDefault();
+    const { images } = this.props;
+    const { currentIdx } = this.state;
+    const prevIdx = ((currentIdx + (images.length - 1)) % images.length);
+    this.setState({ currentIdx: prevIdx });
+  };
+
+  renderItems() {
+    const { images } = this.props;
+    const { currentIdx } = this.state;
+    return images.map((url, id) => {
+      const classes = cn({
+        'carousel-item': true,
+        active: currentIdx === id,
+      });
+
+      const image = require(`../images/${url}`); // eslint-disable-line
+
+      return (
+        <div key={url} className={classes}>
+          <img alt="" className="d-block w-100" src={image} />
+        </div>
+      );
+    });
+  }
+
+  render() {
+    return (
+      <div id="carousel" className="carousel slide" data-ride="carousel">
+        <div className="carousel-inner">
+          {this.renderItems()}
+        </div>
+        <a href="#carousel" className="carousel-control-prev" onClick={this.setPrev} role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" />
+          <span className="sr-only">Previous</span>
+        </a>
+        <a href="#carousel" className="carousel-control-next" onClick={this.setNext} role="button" data-slide="next">
+          <span className="carousel-control-next-icon" />
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
+    );
+  }
+}
+
+Carousel.propTypes = {
+  images: PropTypes.array,
+};
+
+export default Carousel;

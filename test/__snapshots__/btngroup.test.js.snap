@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BtnGroup 1`] = `
+<div
+  class="btn-group"
+  role="group"
+>
+  <button
+    class="btn btn-secondary left"
+    type="button"
+  >
+    Left
+  </button>
+  <button
+    class="btn btn-secondary right"
+    type="button"
+  >
+    Right
+  </button>
+</div>
+`;
+
+exports[`BtnGroup 2`] = `
+<div
+  class="btn-group"
+  role="group"
+>
+  <button
+    class="btn btn-secondary left active"
+    type="button"
+  >
+    Left
+  </button>
+  <button
+    class="btn btn-secondary right"
+    type="button"
+  >
+    Right
+  </button>
+</div>
+`;
+
+exports[`BtnGroup 3`] = `
+<div
+  class="btn-group"
+  role="group"
+>
+  <button
+    class="btn btn-secondary left"
+    type="button"
+  >
+    Left
+  </button>
+  <button
+    class="btn btn-secondary right active"
+    type="button"
+  >
+    Right
+  </button>
+</div>
+`;

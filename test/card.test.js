@@ -6,6 +6,10 @@ it('Card', () => {
     title: 'title',
     text: 'text',
   };
-  const wrapper = shallow(<Card { ...params } />);
+  const wrapper = mount(<Card { ...params } />);
+
+  expect(wrapper.prop('title')).toMatch(params.title);
+  expect(wrapper.prop('text')).toMatch(params.text);
+
   expect(wrapper.render()).toMatchSnapshot();
 });
