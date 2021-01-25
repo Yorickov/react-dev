@@ -4,6 +4,7 @@ import MiscComponents from './simple/index.jsx';
 import Carousel from './Carousel.jsx';
 import Collapse from './Collapse.jsx';
 import SignUpDialog from './composition/SignUpDialog.jsx';
+import MyForm from './MyForm.jsx';
 
 const images = ['first.jpeg', 'second.jpeg', 'third.jpeg'];
 
@@ -16,6 +17,7 @@ const App = () => (
     <Carousel images={images} />
     <Collapse text="hi!!" />
     <SignUpDialog />
+    <MyForm />
   </div>
 );
 
