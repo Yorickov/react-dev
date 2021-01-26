@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalComponent 1`] = `
+<div>
+  <button
+    class="modal-open-button btn btn-danger"
+  >
+    Open
+  </button>
+  <div
+    class="modal"
+    style="display: none;"
+  >
+    <div
+      class="modal-dialog"
+      role="document"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="modal-title"
+          >
+            Modal title
+          </div>
+          <button
+            aria-label="Close"
+            class="header-close-icon"
+            data-dismiss="modal"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              ×
+            </span>
+          </button>
+        </div>
+        <p
+          class="modal-body"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </p>
+        <p
+          class="modal-footer"
+        >
+          <button
+            class="footer-close-button btn btn-primary"
+          >
+            Cancel
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ModalComponent 2`] = `
+<div>
+  <button
+    class="modal-open-button btn btn-danger"
+  >
+    Open
+  </button>
+  <div
+    class="modal fade show"
+    style="display: block;"
+  >
+    <div
+      class="modal-dialog"
+      role="document"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="modal-title"
+          >
+            Modal title
+          </div>
+          <button
+            aria-label="Close"
+            class="header-close-icon"
+            data-dismiss="modal"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              ×
+            </span>
+          </button>
+        </div>
+        <p
+          class="modal-body"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </p>
+        <p
+          class="modal-footer"
+        >
+          <button
+            class="footer-close-button btn btn-primary"
+          >
+            Cancel
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

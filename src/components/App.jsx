@@ -7,6 +7,7 @@ import SignUpDialog from './composition/SignUpDialog.jsx';
 import MyForm from './MyForm.jsx';
 import Logger from './Logger.jsx';
 import TodoBox from './todo/TodoBox.jsx';
+import ModalComponent from './modal/ModalComponent.jsx';
 
 const images = ['first.jpeg', 'second.jpeg', 'third.jpeg'];
 
@@ -22,6 +23,7 @@ const App = () => (
     <MyForm />
     <Logger />
     <TodoBox />
+    <ModalComponent />
   </div>
 );
 
