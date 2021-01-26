@@ -11,7 +11,13 @@ const definitions = [
 
 const MiscComponents = () => (
   <Fragment>
-    <Card title="Simple card" text="Some text" />
+    <Card>
+      <Card.Body>
+        <Card.Title>Simple card</Card.Title>
+        <Card.Text>Some text</Card.Text>
+        <Card.Button />
+      </Card.Body>
+    </Card>
     <Definitions data={definitions} />
     <ListGroup><p>one</p><p>two</p></ListGroup>
     <BtnGroup />

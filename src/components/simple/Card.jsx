@@ -1,19 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-const Card = ({ title, text }) => (
-  <div className="card">
-    <div className="card-body">
-      <h4 className="card-title">{title}</h4>
-      <p className="card-text">{text}</p>
-      <button type="button" className="btn btn-primary">Press me</button>
-    </div>
-  </div>
-);
+const Body = ({ children }) => <div className="card-body">{children}</div>;
+const Title = ({ children }) => <h4 className="card-title">{children}</h4>;
+const Text = ({ children }) => <p className="card-text">{children}</p>;
+const Button = () => <button type="button" className="btn btn-primary">Press me</button>;
 
-Card.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-};
+class Card extends Component {
+  static Body = Body;
+
+  static Title = Title;
+
+  static Text = Text;
+
+  static Button = Button;
+
+  render() {
+    const { children } = this.props;
+    return (
+      <div className="card">{children}</div>
+    );
+  }
+}
 
 export default Card;
