@@ -45,7 +45,7 @@ exports[`Logger 2`] = `
     class="list-group"
   >
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       1
@@ -77,13 +77,13 @@ exports[`Logger 3`] = `
     class="list-group"
   >
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       2
     </button>
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       1
@@ -115,19 +115,19 @@ exports[`Logger 4`] = `
     class="list-group"
   >
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       1
     </button>
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       2
     </button>
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       1
@@ -159,13 +159,13 @@ exports[`Logger 5`] = `
     class="list-group"
   >
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       1
     </button>
     <button
-      class="list-group-item list-group-item-action"
+      class="list-group-item"
       type="button"
     >
       1

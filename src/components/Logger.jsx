@@ -29,7 +29,7 @@ class Logger extends Component {
 
   renderItem({ id, value }) {
     return (
-      <button key={id} type="button" className="list-group-item list-group-item-action" onClick={this.handleRemove(id)}>
+      <button key={id} type="button" className="list-group-item" onClick={this.handleRemove(id)}>
         {value}
       </button>
     );

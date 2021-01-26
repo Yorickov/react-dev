@@ -2,7 +2,7 @@ import React from 'react';
 import Logger from '../src/components/Logger.jsx';
 
 it('Logger', () => {
-  const wrapper = mount(<Logger />);
+  const wrapper = shallow(<Logger />);
   expect(wrapper.render()).toMatchSnapshot();
 
   const inc = wrapper.find('.inc');
@@ -19,7 +19,7 @@ it('Logger', () => {
   expect(wrapper.render()).toMatchSnapshot();
   expect(wrapper.find('.list-group-item')).toHaveLength(3);
 
-  const items = wrapper.find('.list-group-item-action');
+  const items = wrapper.find('.list-group-item');
   items.at(1).simulate('click');
   expect(wrapper.render()).toMatchSnapshot();
   expect(wrapper.find('.list-group-item')).toHaveLength(2);
