@@ -9,6 +9,7 @@ import Logger from './Logger.jsx';
 import TodoBox from './todo/TodoBox.jsx';
 import ModalComponent from './modal/ModalComponent.jsx';
 import Clock from './Clock.jsx';
+import Autocomplete from './Autocomplete.jsx';
 
 const images = ['first.jpeg', 'second.jpeg', 'third.jpeg'];
 
@@ -26,6 +27,7 @@ const App = () => (
     <TodoBox />
     <ModalComponent />
     <Clock />
+    <Autocomplete />
   </div>
 );
 
