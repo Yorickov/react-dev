@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logger 1`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <button
+      class="btn inc"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      class="btn dec"
+      type="button"
+    >
+      -
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Logger 2`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <button
+      class="btn inc"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      class="btn dec"
+      type="button"
+    >
+      -
+    </button>
+  </div>
+  <div
+    class="list-group"
+  >
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Logger 3`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <button
+      class="btn inc"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      class="btn dec"
+      type="button"
+    >
+      -
+    </button>
+  </div>
+  <div
+    class="list-group"
+  >
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      2
+    </button>
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Logger 4`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <button
+      class="btn inc"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      class="btn dec"
+      type="button"
+    >
+      -
+    </button>
+  </div>
+  <div
+    class="list-group"
+  >
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      2
+    </button>
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Logger 5`] = `
+<div>
+  <div
+    class="btn-group"
+    role="group"
+  >
+    <button
+      class="btn inc"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      class="btn dec"
+      type="button"
+    >
+      -
+    </button>
+  </div>
+  <div
+    class="list-group"
+  >
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class="list-group-item list-group-item-action"
+      type="button"
+    >
+      1
+    </button>
+  </div>
+</div>
+`;
