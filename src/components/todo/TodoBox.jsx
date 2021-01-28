@@ -26,8 +26,8 @@ class TodoBox extends Component {
     const { newTaskText } = this.state;
 
     return (
-      <form actin="" onSubmit={this.handleSubmitForm} className="todo-form form-inline mx-3">
-        <div className="form-group">
+      <form action="" onSubmit={this.handleSubmitForm} className="todo-form row">
+        <div className="col-11">
           <input
             type="text"
             onChange={this.handleChangeTask}
@@ -37,7 +37,7 @@ class TodoBox extends Component {
             placeholder="I am going..."
           />
         </div>
-        <button type="submit" className="btn btn-primary">add</button>
+        <button type="submit" className="btn btn-primary col-1">add</button>
       </form>
     );
   }

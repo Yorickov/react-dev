@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../src/components/simple/Card.jsx';
+import Card from '../src/components/stateless/Card.jsx';
 
 it('Card', () => {
   // const params = {

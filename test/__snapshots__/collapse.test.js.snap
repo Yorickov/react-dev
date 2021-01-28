@@ -11,7 +11,7 @@ exports[`Collapse 1`] = `
     </a>
   </p>
   <div
-    class="collapse show"
+    class="collapse"
   >
     <div
       class="card card-body"
@@ -33,7 +33,7 @@ exports[`Collapse 2`] = `
     </a>
   </p>
   <div
-    class="collapse"
+    class="collapse show"
   >
     <div
       class="card card-body"
@@ -55,7 +55,7 @@ exports[`Collapse 3`] = `
     </a>
   </p>
   <div
-    class="collapse show"
+    class="collapse"
   >
     <div
       class="card card-body"

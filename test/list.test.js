@@ -1,5 +1,5 @@
 import React from 'react';
-import ListGroup from '../src/components/simple/ListGroup.jsx';
+import ListGroup from '../src/components/stateless/ListGroup.jsx';
 
 it('ListGroup', () => {
   const wrapper = shallow(

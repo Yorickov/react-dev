@@ -108,7 +108,7 @@ class MyForm extends Component {
             <input id="rules" name="acceptRules" className="form-check-input" onChange={this.handleChangeField} type="checkbox" checked={form.acceptRules} />
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">Sign in</button>
+        <button type="submit" className="btn btn-primary mt-3">Sign in</button>
       </form>
     );
   }

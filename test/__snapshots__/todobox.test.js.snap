@@ -6,11 +6,11 @@ exports[`TodoBox 1`] = `
     class="mb-3"
   >
     <form
-      actin=""
-      class="todo-form form-inline mx-3"
+      action=""
+      class="todo-form row"
     >
       <div
-        class="form-group"
+        class="col-11"
       >
         <input
           class="form-control mr-3"
@@ -21,7 +21,7 @@ exports[`TodoBox 1`] = `
         />
       </div>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary col-1"
         type="submit"
       >
         add
@@ -37,11 +37,11 @@ exports[`TodoBox 2`] = `
     class="mb-3"
   >
     <form
-      actin=""
-      class="todo-form form-inline mx-3"
+      action=""
+      class="todo-form row"
     >
       <div
-        class="form-group"
+        class="col-11"
       >
         <input
           class="form-control mr-3"
@@ -52,7 +52,7 @@ exports[`TodoBox 2`] = `
         />
       </div>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary col-1"
         type="submit"
       >
         add
@@ -68,11 +68,11 @@ exports[`TodoBox 3`] = `
     class="mb-3"
   >
     <form
-      actin=""
-      class="todo-form form-inline mx-3"
+      action=""
+      class="todo-form row"
     >
       <div
-        class="form-group"
+        class="col-11"
       >
         <input
           class="form-control mr-3"
@@ -83,7 +83,7 @@ exports[`TodoBox 3`] = `
         />
       </div>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary col-1"
         type="submit"
       >
         add
@@ -125,11 +125,11 @@ exports[`TodoBox 4`] = `
     class="mb-3"
   >
     <form
-      actin=""
-      class="todo-form form-inline mx-3"
+      action=""
+      class="todo-form row"
     >
       <div
-        class="form-group"
+        class="col-11"
       >
         <input
           class="form-control mr-3"
@@ -140,7 +140,7 @@ exports[`TodoBox 4`] = `
         />
       </div>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary col-1"
         type="submit"
       >
         add
@@ -182,11 +182,11 @@ exports[`TodoBox 5`] = `
     class="mb-3"
   >
     <form
-      actin=""
-      class="todo-form form-inline mx-3"
+      action=""
+      class="todo-form row"
     >
       <div
-        class="form-group"
+        class="col-11"
       >
         <input
           class="form-control mr-3"
@@ -197,7 +197,7 @@ exports[`TodoBox 5`] = `
         />
       </div>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary col-1"
         type="submit"
       >
         add
@@ -265,11 +265,11 @@ exports[`TodoBox 6`] = `
     class="mb-3"
   >
     <form
-      actin=""
-      class="todo-form form-inline mx-3"
+      action=""
+      class="todo-form row"
     >
       <div
-        class="form-group"
+        class="col-11"
       >
         <input
           class="form-control mr-3"
@@ -280,7 +280,7 @@ exports[`TodoBox 6`] = `
         />
       </div>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary col-1"
         type="submit"
       >
         add

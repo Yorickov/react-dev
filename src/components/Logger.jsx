@@ -59,6 +59,7 @@ class Logger extends Component {
   render() {
     return (
       <div>
+        <h5>Logger</h5>
         {this.renderBtns()}
         {this.renderLog()}
       </div>

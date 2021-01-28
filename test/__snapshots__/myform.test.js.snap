@@ -135,7 +135,7 @@ exports[`MyForm 1`] = `
     </div>
   </div>
   <button
-    class="btn btn-primary"
+    class="btn btn-primary mt-3"
     type="submit"
   >
     Sign in
@@ -332,7 +332,7 @@ exports[`MyForm 3`] = `
     </div>
   </div>
   <button
-    class="btn btn-primary"
+    class="btn btn-primary mt-3"
     type="submit"
   >
     Sign in
@@ -536,7 +536,7 @@ exports[`MyForm 5`] = `
     </div>
   </div>
   <button
-    class="btn btn-primary"
+    class="btn btn-primary mt-3"
     type="submit"
   >
     Sign in

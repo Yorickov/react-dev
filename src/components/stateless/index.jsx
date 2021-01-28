@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Card from './Card.jsx';
 import Definitions from './Definitions.jsx';
 import ListGroup from './ListGroup.jsx';
 import BtnGroup from './BtnGroup.jsx';
+import Wrapper from '../pages/Wrapper.jsx';
 
 const definitions = [
   { dd: 'term one', dt: 'description two' },
   { dd: 'another term', dt: 'another description' },
 ];
 
-const MiscComponents = () => (
-  <Fragment>
+const StatelessComponents = () => (
+  <Wrapper>
     <Card>
       <Card.Body>
         <Card.Title>Simple card</Card.Title>
@@ -21,7 +22,7 @@ const MiscComponents = () => (
     <Definitions data={definitions} />
     <ListGroup><p>one</p><p>two</p></ListGroup>
     <BtnGroup />
-  </Fragment>
+  </Wrapper>
 );
 
-export default MiscComponents;
+export default StatelessComponents;

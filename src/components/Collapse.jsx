@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 class Collapse extends Component {
   static defaultProps = {
-    opened: true,
+    opened: false,
   };
 
   constructor(props) {
@@ -42,9 +42,5 @@ class Collapse extends Component {
     );
   }
 }
-
-Collapse.defaultProps = {
-  opened: true,
-};
 
 export default Collapse;

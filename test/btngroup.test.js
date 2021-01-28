@@ -1,5 +1,5 @@
 import React from 'react';
-import BtnGroup from '../src/components/simple/BtnGroup.jsx';
+import BtnGroup from '../src/components/stateless/BtnGroup.jsx';
 
 it('BtnGroup', () => {
   const wrapper = shallow(<BtnGroup />);

@@ -1,0 +1,33 @@
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound.jsx';
+import HomePage from './pages/HomePage.jsx';
+import StatelessPage from './pages/StatelessPage.jsx';
+import SmallPage from './pages/SmallPage.jsx';
+import BigPage from './pages/BigPage.jsx';
+import CarouselPage from './pages/CarouselPage.jsx';
+
+const Content = () => (
+  <Switch>
+    <Route path="/" exact>
+      <HomePage />
+    </Route>
+    <Route path="/stateless">
+      <StatelessPage />
+    </Route>
+    <Route path="/small">
+      <SmallPage />
+    </Route>
+    <Route path="/big">
+      <BigPage />
+    </Route>
+    <Route path="/carousel">
+      <CarouselPage />
+    </Route>
+    <Route path="*">
+      <NotFound />
+    </Route>
+  </Switch>
+);
+
+export default Content;
