@@ -3,6 +3,7 @@ import Card from './Card.jsx';
 import Definitions from './Definitions.jsx';
 import ListGroup from './ListGroup.jsx';
 import BtnGroup from './BtnGroup.jsx';
+import CustomTextInput from './CustomTextInput.jsx';
 import Wrapper from '../pages/Wrapper.jsx';
 
 const definitions = [
@@ -22,6 +23,7 @@ const StatelessComponents = () => (
     <Definitions data={definitions} />
     <ListGroup><p>one</p><p>two</p></ListGroup>
     <BtnGroup />
+    <CustomTextInput />
   </Wrapper>
 );
 

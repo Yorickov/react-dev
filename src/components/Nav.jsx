@@ -9,6 +9,7 @@ const Nav = () => (
       <li className="nav-item"><NavLink to="/small" className="nav-link">Small components</NavLink></li>
       <li className="nav-item"><NavLink to="/big" className="nav-link">Big components</NavLink></li>
       <li className="nav-item"><NavLink to="/carousel" className="nav-link">Carousel</NavLink></li>
+      <li className="nav-item"><NavLink to="/mouse" className="nav-link">Mouse tracker</NavLink></li>
     </ul>
   </nav>
 );

@@ -6,6 +6,7 @@ import StatelessPage from './pages/StatelessPage.jsx';
 import SmallPage from './pages/SmallPage.jsx';
 import BigPage from './pages/BigPage.jsx';
 import CarouselPage from './pages/CarouselPage.jsx';
+import MousePage from './pages/MousePage.jsx';
 
 const Content = () => (
   <Switch>
@@ -23,6 +24,9 @@ const Content = () => (
     </Route>
     <Route path="/carousel">
       <CarouselPage />
+    </Route>
+    <Route path="/mouse">
+      <MousePage />
     </Route>
     <Route path="*">
       <NotFound />
