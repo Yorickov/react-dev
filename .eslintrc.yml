@@ -37,3 +37,4 @@ rules:
   no-useless-escape: 0
   react/no-children-prop: 0
   no-shadow: 0
+  object-curly-newline: 0

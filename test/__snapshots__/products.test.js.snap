@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterableProductTable 1`] = `
+<div>
+  <form>
+    <div
+      class="mb-3"
+    >
+      <input
+        class="form-control"
+        data-test="filter"
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <input
+        class="form-check"
+        data-test="checked"
+        type="checkbox"
+      />
+    </div>
+    <p>
+       Only show products in stock
+    </p>
+  </form>
+  <table
+    class="table table-bordered"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th
+          colspan="2"
+        >
+          Sporting Goods
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Football
+        </td>
+        <td>
+          $49.99
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span
+            style="color: red;"
+          >
+            Basketball
+          </span>
+        </td>
+        <td>
+          $29.99
+        </td>
+      </tr>
+      <tr>
+        <th
+          colspan="2"
+        >
+          Electronics
+        </th>
+      </tr>
+      <tr>
+        <td>
+          iPod Touch
+        </td>
+        <td>
+          $99.99
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span
+            style="color: red;"
+          >
+            iPhone 5
+          </span>
+        </td>
+        <td>
+          $399.99
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`FilterableProductTable 2`] = `
+<div>
+  <form>
+    <div
+      class="mb-3"
+    >
+      <input
+        class="form-control"
+        data-test="filter"
+        placeholder="Search..."
+        type="text"
+        value="ball"
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <input
+        class="form-check"
+        data-test="checked"
+        type="checkbox"
+      />
+    </div>
+    <p>
+       Only show products in stock
+    </p>
+  </form>
+  <table
+    class="table table-bordered"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th
+          colspan="2"
+        >
+          Sporting Goods
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Football
+        </td>
+        <td>
+          $49.99
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span
+            style="color: red;"
+          >
+            Basketball
+          </span>
+        </td>
+        <td>
+          $29.99
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`FilterableProductTable 3`] = `
+<div>
+  <form>
+    <div
+      class="mb-3"
+    >
+      <input
+        class="form-control"
+        data-test="filter"
+        placeholder="Search..."
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <input
+        class="form-check"
+        data-test="checked"
+        type="checkbox"
+      />
+    </div>
+    <p>
+       Only show products in stock
+    </p>
+  </form>
+  <table
+    class="table table-bordered"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th
+          colspan="2"
+        >
+          Sporting Goods
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Football
+        </td>
+        <td>
+          $49.99
+        </td>
+      </tr>
+      <tr>
+        <th
+          colspan="2"
+        >
+          Electronics
+        </th>
+      </tr>
+      <tr>
+        <td>
+          iPod Touch
+        </td>
+        <td>
+          $99.99
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

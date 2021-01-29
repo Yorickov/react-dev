@@ -5,7 +5,7 @@ import MyForm from '../MyForm.jsx';
 import Logger from '../Logger.jsx';
 import TodoBox from '../todo/TodoBox.jsx';
 
-const SmallPage = () => (
+const BigPage = () => (
   <Page>
     <Wrapper>
       <MyForm />
@@ -15,4 +15,4 @@ const SmallPage = () => (
   </Page>
 );
 
-export default SmallPage;
+export default BigPage;
