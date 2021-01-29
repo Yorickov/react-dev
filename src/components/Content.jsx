@@ -8,6 +8,7 @@ import BigPage from './pages/BigPage.jsx';
 import CarouselPage from './pages/CarouselPage.jsx';
 import MousePage from './pages/MousePage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
+import TodoPage from './pages/TodoPage.jsx';
 
 const Content = () => (
   <Switch>
@@ -31,6 +32,9 @@ const Content = () => (
     </Route>
     <Route path="/products">
       <ProductsPage />
+    </Route>
+    <Route path="/todo">
+      <TodoPage />
     </Route>
     <Route path="*">
       <NotFound />

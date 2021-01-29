@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoBox from '../src/components/todo/TodoBox.jsx';
+import TodoBox from '../src/components/todo-small/TodoBox.jsx';
 
 it('TodoBox', () => {
   const mockEvent = { preventDefault: jest.fn() };

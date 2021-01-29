@@ -43,7 +43,7 @@ class MyForm extends Component {
     const keys = Object.keys(form).sort();
     return (
       <div>
-        <button type="button" onClick={this.handleBackToForm}>Back</button>
+        <button type="button" className="btn btn-primary" onClick={this.handleBackToForm}>Back</button>
         <table key="fieldsValues" className="table">
           <tbody>
             {keys.map(this.renderRow)}
@@ -57,8 +57,8 @@ class MyForm extends Component {
     const { form } = this.state;
     return (
       <form onSubmit={this.handleSubmitForm}>
-        <div className="row">
-          <div className="form-group col-md-6">
+        <div className="row mb-2">
+          <div className="col-md-6">
             <label htmlFor="inputEmail4" className="col-form-label">Email</label>
             <input
               type="email"
@@ -70,7 +70,7 @@ class MyForm extends Component {
               placeholder="Email"
             />
           </div>
-          <div className="form-group col-md-6">
+          <div className="col-md-6">
             <label htmlFor="inputPassword4" className="col-form-label">Password</label>
             <input
               type="password"
@@ -83,11 +83,11 @@ class MyForm extends Component {
             />
           </div>
         </div>
-        <div className="form-group">
+        <div className="mb-2">
           <label htmlFor="inputAddress" className="col-form-label">Address</label>
           <textarea type="text" name="address" value={form.address} onChange={this.handleChangeField} className="form-control" id="inputAddress" placeholder="1234 Main St" />
         </div>
-        <div className="row">
+        <div className="row mb-2">
           <div className="form-group col-md-6">
             <label htmlFor="inputCity" className="col-form-label">City</label>
             <input type="text" name="city" onChange={this.handleChangeField} value={form.city} className="form-control" id="inputCity" />
@@ -102,13 +102,13 @@ class MyForm extends Component {
             </select>
           </div>
         </div>
-        <div className="form-group">
+        <div className="mb-3">
           <div className="form-check">
             <label className="form-check-label" htmlFor="rules">Accept Rules</label>
             <input id="rules" name="acceptRules" className="form-check-input" onChange={this.handleChangeField} type="checkbox" checked={form.acceptRules} />
           </div>
         </div>
-        <button type="submit" className="btn btn-primary mt-3">Sign in</button>
+        <button type="submit" className="btn btn-primary">Sign in</button>
       </form>
     );
   }
