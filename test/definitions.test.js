@@ -1,5 +1,5 @@
 import React from 'react';
-import Definitions from '../src/components/stateless/Definitions.jsx';
+import Definitions from '../src/components/simple/Definitions.jsx';
 
 it('Definitions 1', () => {
   const definitions = [

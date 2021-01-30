@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound.jsx';
 import HomePage from './pages/HomePage.jsx';
-import StatelessPage from './pages/StatelessPage.jsx';
+import SimplePage from './pages/SimplePage.jsx';
 import SmallPage from './pages/SmallPage.jsx';
 import BigPage from './pages/BigPage.jsx';
 import CarouselPage from './pages/CarouselPage.jsx';
@@ -15,8 +15,8 @@ const Content = () => (
     <Route path="/" exact>
       <HomePage />
     </Route>
-    <Route path="/stateless">
-      <StatelessPage />
+    <Route path="/simple">
+      <SimplePage />
     </Route>
     <Route path="/small">
       <SmallPage />

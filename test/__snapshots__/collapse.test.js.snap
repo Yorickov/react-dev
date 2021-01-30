@@ -55,7 +55,7 @@ exports[`Collapse 3`] = `
     </a>
   </p>
   <div
-    class="collapse"
+    class="collapse show"
   >
     <div
       class="card card-body"

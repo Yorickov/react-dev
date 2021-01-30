@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Dialog from './Dialog.jsx';
 
-class SignUpDialog extends Component {
-  state = { login: '' };
+const SignUpDialog = () => {
+  const [login, setState] = useState('');
 
-  handleChange = ({ target: { value } }) => {
-    this.setState({ login: value });
+  const handleChange = ({ target: { value } }) => {
+    setState(value);
   };
 
-  handleSignUp = () => {
-    const { login } = this.state;
+  const handleSignUp = () => {
     alert(`Welcome to the board, ${login}!`); // eslint-disable-line
   };
 
-  render() {
-    const { login } = this.state;
-    return (
-      <Dialog
-        title="Marse research program"
-        message="What is your name?"
+  return (
+    <Dialog
+      title="Marse research program"
+      message="What is your name?"
+    >
+      <input
+        value={login}
+        onChange={handleChange}
+        className='from-control'
+      />
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={handleSignUp}
       >
-        <input
-          value={login}
-          onChange={this.handleChange}
-          className='from-control'
-        />
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={this.handleSignUp}
-        >
-          Take me!
-        </button>
-      </Dialog>
-    );
-  }
-}
+        Take me!
+      </button>
+    </Dialog>
+  );
+};
 
 export default SignUpDialog;

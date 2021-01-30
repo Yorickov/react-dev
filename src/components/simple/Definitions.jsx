@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -6,10 +6,10 @@ const Definitions = ({ data }) => {
   const renderDef = (array) => (
     <dl>
       {array.map(({ dt, dd }) => (
-        <React.Fragment key={uniqueId()}>
+        <Fragment key={uniqueId()}>
           <dt>{dt}</dt>
           <dd>{dd}</dd>
-        </React.Fragment>
+        </Fragment>
       ))}
     </dl>
   );

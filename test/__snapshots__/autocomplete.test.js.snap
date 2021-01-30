@@ -4,7 +4,7 @@ exports[`Autocomplete 1`] = `
 <div>
   <form>
     <div
-      class="form-group"
+      class="mb-3"
     >
       <input
         class="form-control"
@@ -21,7 +21,7 @@ exports[`Autocomplete 2`] = `
 <div>
   <form>
     <div
-      class="form-group"
+      class="mb-3"
     >
       <input
         class="form-control"
@@ -46,7 +46,7 @@ exports[`Autocomplete 3`] = `
 <div>
   <form>
     <div
-      class="form-group"
+      class="mb-3"
     >
       <input
         class="form-control"
@@ -68,7 +68,7 @@ exports[`Autocomplete 4`] = `
 <div>
   <form>
     <div
-      class="form-group"
+      class="mb-3"
     >
       <input
         class="form-control"

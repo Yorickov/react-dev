@@ -1,44 +1,37 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import api from '../lib/api';
 
-class Autocomplete extends Component {
-  state = { text: '', countries: [] };
+const Autocomplete = () => {
+  const [countries, setCountries] = useState([]);
+  const [text, setText] = useState('');
 
-  handleChangeText = async ({ target: { value } }) => {
+  const handleChangeText = async ({ target: { value } }) => {
     if (value === '') {
-      this.setState({ text: '', countries: [] });
+      setCountries([]);
+      setText('');
       return;
     }
-    this.setState({ text: value });
-
+    setText(value);
     const res = await api.get('/countries', { key: value });
-    this.setState({ countries: res.data });
+    setCountries(res.data);
   };
 
-  renderCountries() {
-    const { countries } = this.state;
+  const renderCountries = () => (
+    <ul>
+      {countries.map((c) => <li key={c}>{c}</li>)}
+    </ul>
+  );
 
-    return (
-      <ul>
-        {countries.map((c) => <li key={c}>{c}</li>)}
-      </ul>
-    );
-  }
-
-  render() {
-    const { text, countries } = this.state;
-
-    return (
-      <div>
-        <form>
-          <div className="form-group">
-            <input type="text" onChange={this.handleChangeText} value={text} className="form-control" placeholder="Enter Country" />
-          </div>
-        </form>
-        {countries.length > 0 && this.renderCountries() }
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <form>
+        <div className="mb-3">
+          <input type="text" onChange={handleChangeText} value={text} className="form-control" placeholder="Enter Country" />
+        </div>
+      </form>
+      {countries.length > 0 && renderCountries() }
+    </div>
+  );
+};
 
 export default Autocomplete;
