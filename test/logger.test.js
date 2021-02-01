@@ -2,7 +2,7 @@ import React from 'react';
 import Logger from '../src/components/Logger.jsx';
 
 it('Logger', () => {
-  const wrapper = shallow(<Logger />);
+  const wrapper = mount(<Logger />);
   expect(wrapper.render()).toMatchSnapshot();
 
   const inc = wrapper.find('.inc');

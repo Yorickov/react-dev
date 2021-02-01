@@ -1,40 +1,38 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import SearchBar from './SearchBar.jsx';
 import ProductTable from './ProductTable.jsx';
 
-class FilterableProductTable extends Component {
-  state = { filterText: '', inStockOnly: false };
+const FilterableProductTable = (props) => {
+  const [filterText, setText] = useState('');
+  const [inStockOnly, setStock] = useState(false);
 
-  handleFilterTextChange = ({ target: { value } }) => {
-    this.setState({ filterText: value });
+  const { products } = props;
+
+  const handleFilterTextChange = ({ target: { value } }) => {
+    setText(value);
   };
 
-  handleInStockChange = ({ target: { checked } }) => {
-    this.setState({ inStockOnly: checked });
+  const handleInStockChange = ({ target: { checked } }) => {
+    setStock(checked);
   };
 
-  render() {
-    const { products } = this.props;
-    const { filterText, inStockOnly } = this.state;
-
-    return (
-      <div>
-        <SearchBar
-          filterText={filterText}
-          inStockOnly={inStockOnly}
-          onFilterTextChange={this.handleFilterTextChange}
-          onInStockChange={this.handleInStockChange}
-        />
-        <ProductTable
-          products={products}
-          filterText={filterText}
-          inStockOnly={inStockOnly}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={handleFilterTextChange}
+        onInStockChange={handleInStockChange}
+      />
+      <ProductTable
+        products={products}
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+      />
+    </div>
+  );
+};
 
 FilterableProductTable.propTypes = {
   products: PropTypes.array,

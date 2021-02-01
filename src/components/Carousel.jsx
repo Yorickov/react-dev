@@ -1,29 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 
-class Carousel extends Component {
-  state = { currentIdx: 0 };
+const Carousel = (props) => {
+  const [currentIdx, setState] = useState(0);
 
-  setNext = (e) => {
+  const setNext = (e) => {
     e.preventDefault();
-    const { images } = this.props;
-    const { currentIdx } = this.state;
+    const { images } = props;
     const nextIdx = ((currentIdx + 1) % images.length);
-    this.setState({ currentIdx: nextIdx });
+    setState(nextIdx);
   };
 
-  setPrev = (e) => {
+  const setPrev = (e) => {
     e.preventDefault();
-    const { images } = this.props;
-    const { currentIdx } = this.state;
+    const { images } = props;
     const prevIdx = ((currentIdx + (images.length - 1)) % images.length);
-    this.setState({ currentIdx: prevIdx });
+    setState(prevIdx);
   };
 
-  renderItems() {
-    const { images } = this.props;
-    const { currentIdx } = this.state;
+  const renderItems = () => {
+    const { images } = props;
     return images.map((url, id) => {
       const classes = cn({
         'carousel-item': true,
@@ -38,26 +35,24 @@ class Carousel extends Component {
         </div>
       );
     });
-  }
+  };
 
-  render() {
-    return (
-      <div id="carousel" className="carousel slide" data-ride="carousel">
-        <div className="carousel-inner">
-          {this.renderItems()}
-        </div>
-        <a href="#carousel" className="carousel-control-prev" onClick={this.setPrev} role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a href="#carousel" className="carousel-control-next" onClick={this.setNext} role="button" data-slide="next">
-          <span className="carousel-control-next-icon" />
-          <span className="sr-only">Next</span>
-        </a>
+  return (
+    <div id="carousel" className="carousel slide" data-ride="carousel">
+      <div className="carousel-inner">
+        {renderItems()}
       </div>
-    );
-  }
-}
+      <a href="#carousel" className="carousel-control-prev" onClick={setPrev} role="button" data-slide="prev">
+        <span className="carousel-control-prev-icon" />
+        <span className="sr-only">Previous</span>
+      </a>
+      <a href="#carousel" className="carousel-control-next" onClick={setNext} role="button" data-slide="next">
+        <span className="carousel-control-next-icon" />
+        <span className="sr-only">Next</span>
+      </a>
+    </div>
+  );
+};
 
 Carousel.propTypes = {
   images: PropTypes.array,

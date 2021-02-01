@@ -10,13 +10,13 @@ exports[`MyForm 1`] = `
     >
       <label
         class="col-form-label"
-        for="inputEmail4"
+        for="inputEmail"
       >
         Email
       </label>
       <input
         class="form-control"
-        id="inputEmail4"
+        id="inputEmail"
         name="email"
         placeholder="Email"
         type="email"
@@ -28,13 +28,13 @@ exports[`MyForm 1`] = `
     >
       <label
         class="col-form-label"
-        for="inputPassword4"
+        for="inputPassword"
       >
         Password
       </label>
       <input
         class="form-control"
-        id="inputPassword4"
+        id="inputPassword"
         name="password"
         placeholder="Password"
         type="password"
@@ -208,13 +208,13 @@ exports[`MyForm 3`] = `
     >
       <label
         class="col-form-label"
-        for="inputEmail4"
+        for="inputEmail"
       >
         Email
       </label>
       <input
         class="form-control"
-        id="inputEmail4"
+        id="inputEmail"
         name="email"
         placeholder="Email"
         type="email"
@@ -226,13 +226,13 @@ exports[`MyForm 3`] = `
     >
       <label
         class="col-form-label"
-        for="inputPassword4"
+        for="inputPassword"
       >
         Password
       </label>
       <input
         class="form-control"
-        id="inputPassword4"
+        id="inputPassword"
         name="password"
         placeholder="Password"
         type="password"
@@ -412,13 +412,13 @@ exports[`MyForm 5`] = `
     >
       <label
         class="col-form-label"
-        for="inputEmail4"
+        for="inputEmail"
       >
         Email
       </label>
       <input
         class="form-control"
-        id="inputEmail4"
+        id="inputEmail"
         name="email"
         placeholder="Email"
         type="email"
@@ -430,13 +430,13 @@ exports[`MyForm 5`] = `
     >
       <label
         class="col-form-label"
-        for="inputPassword4"
+        for="inputPassword"
       >
         Password
       </label>
       <input
         class="form-control"
-        id="inputPassword4"
+        id="inputPassword"
         name="password"
         placeholder="Password"
         type="password"

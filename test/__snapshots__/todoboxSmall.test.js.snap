@@ -6,7 +6,6 @@ exports[`TodoBox 1`] = `
     class="mb-3"
   >
     <form
-      action=""
       class="todo-form row"
     >
       <div
@@ -37,7 +36,6 @@ exports[`TodoBox 2`] = `
     class="mb-3"
   >
     <form
-      action=""
       class="todo-form row"
     >
       <div
@@ -68,7 +66,6 @@ exports[`TodoBox 3`] = `
     class="mb-3"
   >
     <form
-      action=""
       class="todo-form row"
     >
       <div
@@ -125,7 +122,6 @@ exports[`TodoBox 4`] = `
     class="mb-3"
   >
     <form
-      action=""
       class="todo-form row"
     >
       <div
@@ -182,7 +178,6 @@ exports[`TodoBox 5`] = `
     class="mb-3"
   >
     <form
-      action=""
       class="todo-form row"
     >
       <div
@@ -265,7 +260,6 @@ exports[`TodoBox 6`] = `
     class="mb-3"
   >
     <form
-      action=""
       class="todo-form row"
     >
       <div

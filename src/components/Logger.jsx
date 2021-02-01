@@ -1,70 +1,58 @@
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Logger extends Component {
-  state = { items: [] };
+const Logger = () => {
+  const [items, setState] = useState([]);
 
-  handleCount = (value) => {
-    const { items } = this.state;
+  const handleCount = (value) => {
     const currentValue = _.get(items, [0, 'value'], 0) + value;
     const current = { id: _.uniqueId(), value: currentValue };
-    this.setState({ items: [current, ...items] });
+    setState([current, ...items]);
   };
 
-  // handleCount(value) {
-  //   const { items } = this.state;
-  //   const currentValue = _.get(items, [0, 'value'], 0) + value;
-  //   const current = { id: _.uniqueId(), value: currentValue };
-  //   this.setState({ items: [current, ...items] });
-  // }
-
-  handleInc = () => this.handleCount(1);
-
-  handleDec = () => this.handleCount(-1);
-
-  handleRemove = (currentId) => () => {
-    const { items } = this.state;
-    this.setState({ items: items.filter(({ id }) => id !== currentId) });
+  const handleInc = () => {
+    handleCount(1);
   };
 
-  renderItem({ id, value }) {
-    return (
-      <button key={id} type="button" className="list-group-item" onClick={this.handleRemove(id)}>
-        {value}
-      </button>
-    );
-  }
+  const handleDec = () => {
+    handleCount(-1);
+  };
 
-  renderBtns() {
-    return (
-      <div className="btn-group" role="group">
-        <button type="button" className="btn inc" onClick={this.handleInc}>+</button>
-        <button type="button" className="btn dec" onClick={this.handleDec}>-</button>
-      </div>
-    );
-  }
+  const handleRemove = (currentId) => () => {
+    setState(items.filter(({ id }) => id !== currentId));
+  };
 
-  renderLog() {
-    const { items } = this.state;
+  const renderItem = ({ id, value }) => (
+    <button key={id} type="button" className="list-group-item" onClick={handleRemove(id)}>
+      {value}
+    </button>
+  );
+
+  const renderBtns = () => (
+    <div className="btn-group" role="group">
+      <button type="button" className="btn inc" onClick={handleInc}>+</button>
+      <button type="button" className="btn dec" onClick={handleDec}>-</button>
+    </div>
+  );
+
+  const renderLog = () => {
     if (items.length === 0) {
       return null;
     }
     return (
       <div className="list-group">
-        {items.map((item) => this.renderItem(item))}
+        {items.map(renderItem)}
       </div>
     );
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        <h5>Logger</h5>
-        {this.renderBtns()}
-        {this.renderLog()}
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h5>Logger</h5>
+      {renderBtns()}
+      {renderLog()}
+    </div>
+  );
+};
 
 export default Logger;

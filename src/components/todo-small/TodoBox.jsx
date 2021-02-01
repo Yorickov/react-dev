@@ -1,64 +1,56 @@
 import { uniqueId } from 'lodash';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Item from './Item.jsx';
 
-class TodoBox extends Component {
-  state = { newTaskText: '', tasks: [] };
+const TodoBox = () => {
+  const [newTaskText, setText] = useState('');
+  const [tasks, setTasks] = useState([]);
 
-  handleChangeTask = ({ target: { value } }) => {
-    this.setState({ newTaskText: value });
+  const handleChangeTask = ({ target: { value } }) => {
+    setText(value);
   };
 
-  handleRemoveTask = (removingId) => (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
-    const { tasks } = this.state;
-    this.setState({ tasks: tasks.filter(({ id }) => id !== removingId) });
-  };
-
-  handleSubmitForm = (e) => {
-    e.preventDefault();
-    const { tasks, newTaskText } = this.state;
     const newTask = { id: uniqueId(), text: newTaskText };
-    this.setState({ newTaskText: '', tasks: [newTask, ...tasks] });
+    setTasks([newTask, ...tasks]);
+    setText('');
   };
 
-  renderForm() {
-    const { newTaskText } = this.state;
+  const handleRemoveTask = (removingId) => (e) => {
+    e.preventDefault();
+    setTasks(tasks.filter(({ id }) => id !== removingId));
+  };
 
-    return (
-      <form action="" onSubmit={this.handleSubmitForm} className="todo-form row">
-        <div className="col-11">
-          <input
-            type="text"
-            onChange={this.handleChangeTask}
-            value={newTaskText}
-            required
-            className="form-control mr-3"
-            placeholder="I am going..."
-          />
-        </div>
-        <button type="submit" className="btn btn-primary col-1">add</button>
-      </form>
-    );
-  }
-
-  render() {
-    const { tasks } = this.state;
-
-    return (
-      <div>
-        <div className="mb-3">
-          {this.renderForm()}
-        </div>
-        {tasks.map((task) => (
-          <div key={task.id}>
-            <Item task={task} onRemove={this.handleRemoveTask(task.id)} />
-            <hr />
-          </div>
-        ))}
+  const renderForm = () => (
+    <form onSubmit={handleSubmitForm} className="todo-form row">
+      <div className="col-11">
+        <input
+          type="text"
+          onChange={handleChangeTask}
+          value={newTaskText}
+          required
+          className="form-control mr-3"
+          placeholder="I am going..."
+        />
       </div>
-    );
-  }
-}
+      <button type="submit" className="btn btn-primary col-1">add</button>
+    </form>
+  );
+
+  return (
+    <div>
+      <div className="mb-3">
+        {renderForm()}
+      </div>
+      {tasks.map((task) => (
+        <div key={task.id}>
+          <Item task={task} onRemove={handleRemoveTask(task.id)} />
+          <hr />
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default TodoBox;
