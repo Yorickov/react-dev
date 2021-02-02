@@ -1,106 +1,93 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import update from 'immutability-helper';
 import Item from './Item.jsx';
 import routes from '../../lib/routes';
 import api from '../../lib/api';
 
-class TodoBox extends Component {
-  state = { newTaskText: '', tasks: [] };
+const TodoBox = () => {
+  const [newTaskText, setText] = useState('');
+  const [tasks, setTasks] = useState([]);
 
-  handleChangeText = ({ target: { value } }) => {
-    this.setState({ newTaskText: value });
+  useEffect(() => {
+    (async () => {
+      const response = await api.get(routes.tasksPath());
+      setTasks(response.data);
+    })();
+  }, []);
+
+  const handleChangeText = ({ target: { value } }) => {
+    setText(value);
   };
 
-  handleSubmitForm = async (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
-    const { newTaskText, tasks } = this.state;
     const response = await api.post(routes.tasksPath(), { body: newTaskText });
+
     const newTasks = [response.data, ...tasks];
-    this.setState({ newTaskText: '', tasks: newTasks });
+    setTasks(newTasks);
+    setText('');
   };
 
-  handleFinishTask = (id) => async (e) => {
+  const handleFinishTask = (id) => async (e) => {
     e.preventDefault();
     await api.patch(routes.finishTaskPath(id));
 
-    const { tasks } = this.state;
     const index = tasks.findIndex((t) => t.id === id);
     const updatedTasks = update(tasks, { [index]: { $merge: { state: 'finished' } } });
-    this.setState({ tasks: updatedTasks });
+    setTasks(updatedTasks);
   };
 
-  handleActivateTask = (id) => async (e) => {
+  const handleActivateTask = (id) => async (e) => {
     e.preventDefault();
     await api.patch(routes.activateTaskPath(id));
 
-    const { tasks } = this.state;
     const index = tasks.findIndex((t) => t.id === id);
     const updatedTasks = update(tasks, { [index]: { $merge: { state: 'active' } } });
-    this.setState({ tasks: updatedTasks });
+    setTasks(updatedTasks);
   };
 
-  renderActiveTasks(activeTasks) {
-    return (
-      <div className="todo-active-tasks">
-        {activeTasks
-          .map((t) => <Item key={t.id} task={t} onChangeTask={this.handleFinishTask(t.id)}/>)}
+  const renderActiveTasks = (activeTasks) => (
+    <div className="todo-active-tasks">
+      {activeTasks
+        .map((t) => <Item key={t.id} task={t} onChangeTask={handleFinishTask(t.id)}/>)}
+    </div>
+  );
+
+  const renderFinishedTasks = (finishedTasks) => (
+    <div className="todo-finished-tasks">
+      {finishedTasks
+        .map((t) => <Item key={t.id} task={t} onChangeTask={handleActivateTask(t.id)}/>)}
+    </div>
+  );
+
+  const renderForm = () => (
+    <form className="todo-form" onSubmit={handleSubmitForm}>
+      <div className="mb-3">
+        <input
+          type="text"
+          onChange={handleChangeText}
+          value={newTaskText}
+          required
+          className="form-control mr-3"
+          placeholder="I am going..."
+        />
       </div>
-    );
-  }
+      <button type="submit" className="btn btn-primary">add</button>
+    </form>
+  );
 
-  renderFinishedTasks(finishedTasks) {
-    return (
-      <div className="todo-finished-tasks">
-        {finishedTasks
-          .map((t) => <Item key={t.id} task={t} onChangeTask={this.handleActivateTask(t.id)}/>)}
+  const activeTasks = tasks.filter((t) => t.state === 'active');
+  const finishedTasks = tasks.filter((t) => t.state === 'finished');
+
+  return (
+    <div>
+      <div className="mb-3">
+        {renderForm()}
       </div>
-    );
-  }
-
-  resetTasks = async () => {
-    const response = await api.get(routes.tasksPath());
-    this.setState({ tasks: response.data });
-  }
-
-  componentDidMount() {
-    this.resetTasks();
-  }
-
-  renderForm() {
-    const { newTaskText } = this.state;
-
-    return (
-      <form className="todo-form" onSubmit={this.handleSubmitForm}>
-        <div className="mb-3">
-          <input
-            type="text"
-            onChange={this.handleChangeText}
-            value={newTaskText}
-            required
-            className="form-control mr-3"
-            placeholder="I am going..."
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">add</button>
-      </form>
-    );
-  }
-
-  render() {
-    const { tasks } = this.state;
-    const activeTasks = tasks.filter((t) => t.state === 'active');
-    const finishedTasks = tasks.filter((t) => t.state === 'finished');
-
-    return (
-      <div>
-        <div className="mb-3">
-          {this.renderForm()}
-        </div>
-        {activeTasks.length > 0 && this.renderActiveTasks(activeTasks)}
-        {finishedTasks.length > 0 && this.renderFinishedTasks(finishedTasks)}
-      </div>
-    );
-  }
-}
+      {activeTasks.length > 0 && renderActiveTasks(activeTasks)}
+      {finishedTasks.length > 0 && renderFinishedTasks(finishedTasks)}
+    </div>
+  );
+};
 
 export default TodoBox;

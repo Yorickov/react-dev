@@ -1,0 +1,22 @@
+.table td {
+  padding: 0;
+  text-align: center;
+}
+
+.square {
+  background: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+// .game {
+//   display: flex;
+//   flex-direction: row;
+// }

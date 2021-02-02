@@ -9,6 +9,7 @@ import CarouselPage from './pages/CarouselPage.jsx';
 import MousePage from './pages/MousePage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
 import TodoPage from './pages/TodoPage.jsx';
+import TicTacToePage from './pages/TicTacToePage.jsx';
 
 const Content = () => (
   <Switch>
@@ -35,6 +36,9 @@ const Content = () => (
     </Route>
     <Route path="/todo">
       <TodoPage />
+    </Route>
+    <Route path="/tictactoe">
+      <TicTacToePage />
     </Route>
     <Route path="*">
       <NotFound />

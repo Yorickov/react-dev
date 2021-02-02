@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicTacToe 1`] = `
+<div
+  class="row"
+>
+  <div
+    class="col-auto game-board"
+  >
+    <table
+      class="table table-bordered"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="col-8 game-info"
+  >
+    <div
+      class="status"
+    >
+      Next step: X
+    </div>
+    <ol>
+      <li>
+        <button>
+          To the start
+        </button>
+      </li>
+    </ol>
+  </div>
+</div>
+`;
+
+exports[`TicTacToe 2`] = `
+<div
+  class="row"
+>
+  <div
+    class="col-auto game-board"
+  >
+    <table
+      class="table table-bordered"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <button
+              class="square border-0"
+            >
+              X
+            </button>
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            >
+              X
+            </button>
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            >
+              X
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              class="square border-0"
+            >
+              O
+            </button>
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            >
+              O
+            </button>
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+          <td>
+            <button
+              class="square border-0"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="col-8 game-info"
+  >
+    <div
+      class="status"
+    >
+      The winner is X
+    </div>
+    <ol>
+      <li>
+        <button>
+          To the start
+        </button>
+      </li>
+      <li>
+        <button>
+          Move to step #1
+        </button>
+      </li>
+      <li>
+        <button>
+          Move to step #2
+        </button>
+      </li>
+      <li>
+        <button>
+          Move to step #3
+        </button>
+      </li>
+      <li>
+        <button>
+          Move to step #4
+        </button>
+      </li>
+      <li>
+        <button>
+          Move to step #5
+        </button>
+      </li>
+    </ol>
+  </div>
+</div>
+`;

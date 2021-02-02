@@ -11,7 +11,7 @@ const definitions = [
   { dd: 'another term', dt: 'another description' },
 ];
 
-const StatelessComponents = () => (
+const SimpleComponents = () => (
   <Wrapper>
     <Card>
       <Card.Body>
@@ -27,4 +27,4 @@ const StatelessComponents = () => (
   </Wrapper>
 );
 
-export default StatelessComponents;
+export default SimpleComponents;

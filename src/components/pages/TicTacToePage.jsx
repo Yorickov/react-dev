@@ -1,14 +1,14 @@
 import React from 'react';
 import Page from './Page.jsx';
 import Wrapper from './Wrapper.jsx';
-import TodoBox from '../todo-middle/TodoBox.jsx';
+import TicTacToe from '../tictactoe/TicTacToe.jsx';
 
-const TodoPage = () => (
+const TicTacToePage = () => (
   <Page>
     <Wrapper>
-      <TodoBox />
+      <TicTacToe />
     </Wrapper>
   </Page>
 );
 
-export default TodoPage;
+export default TicTacToePage;
