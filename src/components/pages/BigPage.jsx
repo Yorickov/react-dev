@@ -4,6 +4,7 @@ import Wrapper from './Wrapper.jsx';
 import MyForm from '../MyForm.jsx';
 import Logger from '../Logger.jsx';
 import TodoBox from '../todo-small/TodoBox.jsx';
+import TodoBoxR from '../todo-small-reducer/TodoBoxR.jsx';
 
 const BigPage = () => (
   <Page>
@@ -11,6 +12,7 @@ const BigPage = () => (
       <MyForm />
       <Logger />
       <TodoBox />
+      <TodoBoxR />
     </Wrapper>
   </Page>
 );

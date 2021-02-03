@@ -8,11 +8,9 @@ const TodoBox = () => {
   const [newTaskText, setText] = useState('');
   const [tasks, setTasks] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      const response = await api.get(routes.tasksPath());
-      setTasks(response.data);
-    })();
+  useEffect(async () => {
+    const response = await api.get(routes.tasksPath());
+    setTasks(response.data);
   }, []);
 
   const handleChangeText = ({ target: { value } }) => {
